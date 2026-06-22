@@ -4,7 +4,7 @@ import Monogram from "./Monogram";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-ink text-cream/90">
+    <footer style={{ background: 'var(--plum)', color: '#F2F2F0' }}>
       <div className="container py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow text-gold mb-4">Navigation</p>
+            <p className="eyebrow mb-4" style={{ color: 'var(--teal-light)' }}>Navigation</p>
             <ul className="space-y-2.5 text-[15px]">
               <li><a className="link-underline hover:text-cream" href="#travaux">Travaux</a></li>
               <li><a className="link-underline hover:text-cream" href="#a-propos">À propos</a></li>
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow text-gold mb-4">Contact</p>
+            <p className="eyebrow mb-4" style={{ color: 'var(--teal-light)' }}>Contact</p>
             <ul className="space-y-2.5 text-[15px] text-cream/80">
               <li><a className="link-underline hover:text-cream" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></li>
               <li><a className="link-underline hover:text-cream" href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}>{CONTACT.phone}</a></li>

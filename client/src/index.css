@@ -1,8 +1,13 @@
 /*
   Portfolio Marion Ziebel — Direction "Atelier Éditorial"
-  Palette : crème papier (fond), anthracite (texte), bordeaux signature, doré, sauge, bleu pétrole.
-  Typo : Fraunces (display serif fort contraste) + Archivo (grotesque) + Archivo Expanded (labels).
-  Garder ce fichier comme source unique de vérité pour le thème.
+  Palette exacte du CV :
+    - Bleu sarcelle  #3E87A9  (titres de section, sticker Adaptabilité)
+    - Bordeaux/prune #3E222D  (sticker Créative, accents forts)
+    - Orange vif     #FF673B  (liens, highlights, CTA)
+    - Fond gris clair #F2F2F0 (fond du CV)
+    - Blanc pur      #FFFFFF
+    - Anthracite     #1A1A1A  (texte)
+  Typo : Fraunces (display serif) + Archivo (grotesque)
 */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -34,16 +39,15 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Couleurs de marque */
-  --color-cream: var(--cream);
-  --color-paper: var(--paper);
+  /* Couleurs de marque — fidèles au CV */
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-plum: var(--plum);
+  --color-orange: var(--orange);
+  --color-orange-soft: var(--orange-soft);
   --color-ink: var(--ink);
-  --color-wine: var(--wine);
-  --color-wine-soft: var(--wine-soft);
-  --color-gold: var(--gold);
-  --color-sage: var(--sage);
-  --color-petrol: var(--petrol);
-  --color-blush: var(--blush);
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Archivo", system-ui, sans-serif;
@@ -54,37 +58,38 @@
 }
 
 :root {
-  --radius: 0.4rem;
+  --radius: 0.5rem;
 
-  --cream: #F7F3EE;
-  --paper: #FBF8F3;
-  --ink: #1F1B1A;
-  --wine: #3A232B;
-  --wine-soft: #6E3B43;
-  --gold: #C9A24B;
-  --sage: #9EA771;
-  --petrol: #0E7C97;
-  --blush: #F2E0D6;
+  /* Palette CV */
+  --teal:        #3E87A9;
+  --teal-light:  #B4CEDA;
+  --plum:        #3E222D;
+  --orange:      #FF673B;
+  --orange-soft: #FFE8E1;
+  --ink:         #1A1A1A;
+  --paper:       #F2F2F0;
+  --mist:        #E8E8E6;
 
-  --background: #F7F3EE;
-  --foreground: #1F1B1A;
-  --card: #FBF8F3;
-  --card-foreground: #1F1B1A;
-  --popover: #FBF8F3;
-  --popover-foreground: #1F1B1A;
-  --primary: #3A232B;
-  --primary-foreground: #F7F3EE;
-  --secondary: #F2E0D6;
-  --secondary-foreground: #3A232B;
-  --muted: #ECE5DC;
-  --muted-foreground: #6B635C;
-  --accent: #C9A24B;
-  --accent-foreground: #1F1B1A;
-  --destructive: #b3261e;
+  /* Tokens sémantiques */
+  --background:           #F2F2F0;
+  --foreground:           #1A1A1A;
+  --card:                 #FFFFFF;
+  --card-foreground:      #1A1A1A;
+  --popover:              #FFFFFF;
+  --popover-foreground:   #1A1A1A;
+  --primary:              #3E222D;
+  --primary-foreground:   #F2F2F0;
+  --secondary:            #E8E8E6;
+  --secondary-foreground: #3E222D;
+  --muted:                #E2E2E0;
+  --muted-foreground:     #6B6B69;
+  --accent:               #FF673B;
+  --accent-foreground:    #FFFFFF;
+  --destructive:          #b3261e;
   --destructive-foreground: #ffffff;
-  --border: #E2D9CD;
-  --input: #E2D9CD;
-  --ring: #C9A24B;
+  --border:               #D8D8D6;
+  --input:                #D8D8D6;
+  --ring:                 #3E87A9;
 }
 
 @layer base {
@@ -103,8 +108,8 @@
     font-weight: 600;
   }
   ::selection {
-    background: var(--wine);
-    color: var(--cream);
+    background: var(--teal);
+    color: #fff;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -133,9 +138,7 @@
 
 /* Texture papier subtile */
 .paper-grain {
-  background-image:
-    radial-gradient(transparent 0, transparent 1px, rgba(31,27,26,0.012) 1px),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
 }
 
 /* Label en petites capitales lettrées */
@@ -164,11 +167,6 @@
 .link-underline:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-/* Trait pointillé qui se dessine */
-.dash-draw {
-  stroke-dasharray: 8 8;
 }
 
 @media (prefers-reduced-motion: reduce) {

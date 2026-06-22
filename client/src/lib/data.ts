@@ -6,10 +6,6 @@ export const ASSETS = {
   monogramDark: "/manus-storage/monogram-mz-dark_3d34d136.png",
   portrait: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349845794/kw8Uk3RqEY5Pft8VN65Jcz/portrait-editorial-dzEfmQZCgmXiCxgrLmugar.webp",
   ascuaCover: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349845794/kw8Uk3RqEY5Pft8VN65Jcz/ascua-cover-WjK6Lxcd3gqtUGFq8fWFGp.webp",
-  ascuaPalette: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349845794/kw8Uk3RqEY5Pft8VN65Jcz/ascua-palette-board-8qvoYmKvRb3Pj5Vhu7ebit.webp",
-  ascuaPlate: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349845794/kw8Uk3RqEY5Pft8VN65Jcz/ascua-plate-m9fbSAVVy7Z5fphdEKHf6s.webp",
-  ascuaSketches: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349845794/kw8Uk3RqEY5Pft8VN65Jcz/ascua-sketches-myJdWmiB84L2Ck4CcHeoki.webp",
-  ascuaFull: "/manus-storage/ascua-casestudy-full_37591400.webp",
   orelys: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349845794/kw8Uk3RqEY5Pft8VN65Jcz/project-orelys-hzTUd4zWppyMHT9PCtcNQ7.webp",
   plume: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349845794/kw8Uk3RqEY5Pft8VN65Jcz/project-plume-5dWFaVv9XNbeEK4JDrBgyq.webp",
   polytech: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349845794/kw8Uk3RqEY5Pft8VN65Jcz/project-polytech-GbQGRyx4h3Ym2WvGLoJ2Lu.webp",
@@ -32,7 +28,6 @@ export type Project = {
   tags: string[];
   image: string;
   accent: string;
-  detailed?: boolean;
 };
 
 export const PROJECTS: Project[] = [
@@ -40,13 +35,12 @@ export const PROJECTS: Project[] = [
     slug: "ascua",
     index: "01",
     title: "ASCUA",
-    subtitle: "Identité visuelle & UI d'un restaurant à vocation inclusive",
+    subtitle: "Identité visuelle d'un restaurant à vocation inclusive",
     year: "2026",
     role: "Branding · UI · Logo",
     tags: ["Branding", "UI Design", "Logo", "Art direction"],
     image: ASSETS.ascuaCover,
-    accent: "var(--gold)",
-    detailed: true,
+    accent: "#3E222D",
   },
   {
     slug: "chez-orelys",
@@ -57,7 +51,7 @@ export const PROJECTS: Project[] = [
     role: "Branding · Web design",
     tags: ["Branding", "Web", "Logotype"],
     image: ASSETS.orelys,
-    accent: "var(--wine)",
+    accent: "#FF673B",
   },
   {
     slug: "plume",
@@ -68,7 +62,7 @@ export const PROJECTS: Project[] = [
     role: "Print · Game design · Illustration",
     tags: ["Print", "Illustration", "Game design"],
     image: ASSETS.plume,
-    accent: "var(--sage)",
+    accent: "#3E87A9",
   },
   {
     slug: "polytech-sorbonne",
@@ -79,7 +73,7 @@ export const PROJECTS: Project[] = [
     role: "Identité · Print · Réseaux sociaux",
     tags: ["Identité", "Print", "Social media"],
     image: ASSETS.polytech,
-    accent: "var(--petrol)",
+    accent: "#3E87A9",
   },
 ];
 

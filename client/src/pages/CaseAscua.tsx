@@ -190,7 +190,7 @@ export default function CaseAscua() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="rounded-[1.6rem] overflow-hidden border border-border">
-              <img src={ASSETS.ascuaSketches} alt="Croquis de recherche du logo ASCUA" className="w-full h-auto" />
+              <img src={ASSETS.ascuaCover} alt="Croquis de recherche du logo ASCUA" className="w-full h-auto" />
             </div>
           </Reveal>
         </div>
@@ -206,7 +206,7 @@ export default function CaseAscua() {
 
           <div className="grid lg:grid-cols-2 gap-6 items-stretch">
             <Reveal className="rounded-[1.4rem] border border-border overflow-hidden bg-card">
-              <img src={ASSETS.ascuaPalette} alt="Charte typographique et palette ASCUA" className="w-full h-auto" />
+              <img src={ASSETS.ascuaCover} alt="Charte typographique et palette ASCUA" className="w-full h-auto" />
             </Reveal>
 
             <Reveal delay={0.1} className="rounded-[1.4rem] border border-border bg-card p-8 flex flex-col justify-between">
@@ -257,7 +257,7 @@ export default function CaseAscua() {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-6">
             <Reveal className="rounded-[1.6rem] overflow-hidden border border-border">
-              <img src={ASSETS.ascuaPlate} alt="Logo ASCUA sur une assiette de restaurant" className="w-full h-full object-cover" />
+              <img src={ASSETS.ascuaCover} alt="Logo ASCUA sur une assiette de restaurant" className="w-full h-full object-cover" />
             </Reveal>
             <Reveal delay={0.1} className="rounded-[1.6rem] overflow-hidden border border-border bg-ink grid place-items-center p-10">
               <img src={ASSETS.ascuaCover} alt="Logo doré ASCUA en relief" className="w-full h-auto rounded-2xl" />

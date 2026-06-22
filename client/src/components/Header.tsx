@@ -48,7 +48,7 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between h-[68px]">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <span className="grid place-items-center h-10 w-10 rounded-full bg-wine">
+          <span className="grid place-items-center h-10 w-10 rounded-full" style={{ background: 'var(--plum)' }}>
             <Monogram variant="gold" className="h-7 w-7 object-contain" />
           </span>
           <span className="hidden sm:flex flex-col leading-none">
@@ -78,9 +78,10 @@ export default function Header() {
           <a
             href="#contact"
             onClick={(e) => handleAnchor(e, "#contact")}
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-ink text-cream px-5 py-2.5 text-[14px] font-medium transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97]"
+            className="hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-medium transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97]"
+            style={{ background: 'var(--teal)', color: '#fff' }}
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full animate-pulse" style={{ background: 'var(--orange)' }} />
             Me contacter
           </a>
           <button
