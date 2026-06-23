@@ -118,14 +118,6 @@ export const CONTACT = {
 
 Remplacez l'URL dans `ASSETS.portrait` (dans `data.ts`) par l'URL de votre vraie photo (uploadée via `manus-upload-file --webdev` ou hébergée ailleurs).
 
----
-
-## Déploiement
-
-Le site est déployé et hébergé sur **Manus** à l'adresse :
-[https://marionfolio-kw8uk3rq.manus.space](https://marionfolio-kw8uk3rq.manus.space)
-
-Pour déployer sur d'autres plateformes (Vercel, Netlify, etc.) :
 
 ```bash
 pnpm build
