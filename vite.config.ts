@@ -203,9 +203,21 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+const isGitHubPagesBuild = process.env.GITHUB_PAGES === "true";
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  jsxLocPlugin(),
+  // Ces plugins sont des outils internes à la plateforme Manus (preview live,
+  // logs de debug, proxy de stockage). Ils ne doivent jamais être inclus dans
+  // un déploiement statique comme GitHub Pages : ils plantent au chargement
+  // car ils s'attendent à tourner dans l'iframe de prévisualisation de Manus.
+  ...(isGitHubPagesBuild ? [] : [vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()]),
+];
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === "true" ? "/marion-portfolio/" : "/",
   plugins,
   resolve: {
     alias: {
